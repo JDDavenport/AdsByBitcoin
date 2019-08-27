@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var forms_resolver_1 = require("./forms.resolver");
+exports.FormsValidationsResolver = forms_resolver_1.FormsValidationsResolver;
+exports.FormsExtendedControlsResolver = forms_resolver_1.FormsExtendedControlsResolver;
+exports.FormsLayoutsResolver = forms_resolver_1.FormsLayoutsResolver;
+exports.FormsWizardResolver = forms_resolver_1.FormsWizardResolver;
+exports.MaterialFormsResolver = forms_resolver_1.MaterialFormsResolver;
+var controls_and_validations_component_1 = require("./pages/controls-and-validations/controls-and-validations.component");
+exports.ControlsAndValidationsPageComponent = controls_and_validations_component_1.ControlsAndValidationsPageComponent;
+var extended_controls_component_1 = require("./pages/extended-controls/extended-controls.component");
+exports.ExtendedControlsPageComponent = extended_controls_component_1.ExtendedControlsPageComponent;
+var sample_layouts_component_1 = require("./pages/sample-layouts/sample-layouts.component");
+exports.SampleLayoutsPageComponent = sample_layouts_component_1.SampleLayoutsPageComponent;
+var wizard_component_1 = require("./pages/wizard/wizard.component");
+exports.WizardPageComponent = wizard_component_1.WizardPageComponent;
+var material_forms_component_1 = require("./pages/material-forms/material-forms.component");
+exports.MaterialFormsPageComponent = material_forms_component_1.MaterialFormsPageComponent;
+var forms_module_1 = require("./forms.module");
+exports.FormsModule = forms_module_1.FormsModule;
+//# sourceMappingURL=index.js.map

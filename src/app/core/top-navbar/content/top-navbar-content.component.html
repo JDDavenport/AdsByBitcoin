@@ -1,0 +1,41 @@
+<div class="branding-col">
+  <div *ngIf="auth.user | async">
+  <button type="button" (click)="toggleSideMenu()" class="menu-toggle" [ngClass]="{ 'menu-visible': sideMenuVisible, 'menu-hidden': !sideMenuVisible }">
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="brand-wrapper">
+    <img class="brand-logo" [src]="baseUrl + '/assets/imgs/angular.svg'" alt="Angular">
+    <h3 class="brand-name">Ads by bitcoin</h3>
+  </div>
+</div>
+</div>
+
+<!-- <app-search-bar *ngIf="auth.user | async" class="hidden-xs"></app-search-bar> -->
+
+<div class="actions-wrapper">
+  <div class="logged-user">
+    <div class="user-image-wrapper">
+      <!-- <app-preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="baseUrl + '/assets/imgs/profiles/default.jpeg'" alt="profile image" title="profile image"></app-preload-image> -->
+    </div>
+    <div *ngIf="auth.user | async; then authenticated else guest">
+      <!-- template will replace this div -->
+    </div>
+    <ng-template #guest>
+    <a [routerLink]="['login']"><span class="user-name">Login</span></a>
+
+    </ng-template>
+
+    <ng-template #authenticated>
+        <a *ngIf="auth.user | async as user" [routerLink]="['user']">
+            <span class="user-name" style="padding-right: 10px;">{{user.displayName}}</span></a>
+            <a [routerLink]="['/user']"><span class="user-name">Logout</span></a> 
+    </ng-template>
+  </div>
+<div *ngIf="auth.user | async">
+  <!-- <app-messages-menu [messages]="messages"></app-messages-menu>
+
+  <app-notifications-menu-button [notifications]="notifications"></app-notifications-menu-button> -->
+  <!-- <a *ngIf="!auth.user" [routerLink]="['register']"><span class="user-name">Register</span></a> -->
+
+</div>
+</div>
